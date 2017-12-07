@@ -25,8 +25,12 @@ app.get('/articles/:id', (req, res) => {
 });
 
 app.put('/articles/:id', function (req,res) {
-
-})
+    const id = req.params.id;
+    // const newArticle = req.body;
+    console.log('Updating:', id);
+    articles[id]=  req.body;
+    res.send(articles[id]);
+});
 
 app.post('/articles', (req, res) => {
 
