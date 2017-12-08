@@ -25,7 +25,9 @@ app.get('/articles/:id', (req, res) => {
 });
 
 app.put('/articles/:id', function (req,res) {
-
+    res.write('Updating the article: ' + req.params.id + '\n');
+    res.end('Will update the article: ' + req.body.name + 
+          ' with details: ' + req.body.description);
 })
 
 app.post('/articles', (req, res) => {
